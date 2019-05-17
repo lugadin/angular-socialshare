@@ -6,7 +6,7 @@
  * http://720kb.github.io/angular-socialshare
  * 
  * MIT license
- * Tue May 14 2019
+ * Fri May 17 2019
  */
 /*global angular*/
 /*eslint no-loop-func:0, func-names:0*/
@@ -676,7 +676,7 @@
     }
     , manageOkShare = function manageOkShare($window, attrs) {
       $window.open(
-        'http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st._surl=' + encodeURIComponent(attrs.socialshareUrl || $window.location.href) + '&st.comments=' + encodeURIComponent(attrs.socialshareText)
+        'https://connect.ok.ru/dk?st.cmd=WidgetSharePreview&st.shareUrl=' + encodeURIComponent(attrs.socialshareUrl || $window.location.href) + '&st.comments=' + encodeURIComponent(attrs.socialshareText)
         , 'Ok', 'toolbar=0,status=0,resizable=yes,width=' + attrs.socialsharePopupWidth + ',height=' + attrs.socialsharePopupHeight
         + ',top=' + ($window.innerHeight - attrs.socialsharePopupHeight) / 2 + ',left=' + ($window.innerWidth - attrs.socialsharePopupWidth) / 2);
     }
